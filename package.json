@@ -1,11 +1,15 @@
 {
   "name": "@nestixis/cache-manager",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "",
   "author": "",
   "license": "UNLICENSED",
   "publishConfig": {
     "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Nestixis/cache-manager.git"
   },
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
