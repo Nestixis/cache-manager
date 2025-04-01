@@ -11,7 +11,7 @@ Cache Manager is a lightweight and efficient library for managing redis caching 
 
 ## Installation
 
-Install the package using npm, you need .npmrc configured
+Install the package using npm
 
 ```sh
 npm i @signal-os/cache-manager
