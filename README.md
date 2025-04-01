@@ -14,7 +14,7 @@ Cache Manager is a lightweight and efficient library for managing redis caching 
 Install the package using npm
 
 ```sh
-npm i @signal-os/cache-manager
+npm i @nestixis/cache-manager
 ```
 
 ## Usage
@@ -67,7 +67,11 @@ export class Service {
 }
 ```
 
-Automatic response caching
+Automatic response caching. There are two interceptors first
+
+- CacheInterceptor - saves response for time defined by ttl.
+
+- CacheRemoveInterceptor - removes cache, can be used on POST, DELETE, PUT, PATCH methods. It ensures that cache will be removed.
 
 ```ts
 @Controller('site/:token')
