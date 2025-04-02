@@ -30,16 +30,16 @@ export class CacheManager {
    *          Otherwise, the raw string value is returned.
    * @throws Will not throw an error if JSON parsing fails; instead, it returns the raw string value.
    */
-  async get(key: string): Promise<string | object> {
+  async get<T = string | object>(key: string): Promise<T | undefined> {
     if (!key || key.includes('*')) {
       return undefined;
     }
 
     const value = await this.redisClient.get(`${this.cachePrefix}${key}`);
     try {
-      return JSON.parse(value);
+      return JSON.parse(value) as T;
     } catch {
-      return value;
+      return value as T;
     }
   }
 

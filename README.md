@@ -52,12 +52,12 @@ export class Service {
 
   async add(): Promise<void> {
     //...
-    await this.cacheManager.add('key', { value: 1 }, 1000);
+    await this.cacheManager.set('key', { value: 1 }, 1000);
   }
 
   async remove(): Promise<void> {
     //...
-    await this.cacheManager.remove('key');
+    await this.cacheManager.delete('key');
   }
 
   async get(): Promise<any> {
