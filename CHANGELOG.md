@@ -1,5 +1,15 @@
 # Changelog
 
+## [0.1.1] - 2026-10-19
+
+### Fixed
+
+- Build automatically before packaging, using the production TypeScript configuration.
+- Disable incremental production compilation so repeated clean builds always recreate the entry points.
+- Check that both entry points exist before packing.
+- Ensure dist/index.js and dist/index.d.ts exist in the published archive and exclude compiled tests.
+- Route tsc:publish through the same prepack build as npm publish.
+
 ## [0.1.0] - 2026-10-19
 
 ### Breaking changes
