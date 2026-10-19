@@ -1,6 +1,6 @@
 {
   "name": "@nestixis/cache-manager",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "",
   "author": "",
   "license": "MIT",
@@ -26,9 +26,10 @@
     "test:cov": "jest --runInBand --coverage",
     "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
     "test:e2e": "jest --config ./test/jest-e2e.json",
-    "tsc:publish": "tsc && npm publish",
+    "tsc:publish": "npm publish",
     "test:redis": "jest --runInBand --config test/jest-redis.json",
-    "test:types": "tsc -p tsconfig.test.json"
+    "test:types": "tsc -p tsconfig.test.json",
+    "prepack": "npm run build && node scripts/check-package.cjs"
   },
   "dependencies": {
     "@nestjs/common": "^11.2.1",
@@ -90,5 +91,11 @@
   },
   "engines": {
     "node": ">=20.11"
-  }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE",
+    "CHANGELOG.md"
+  ]
 }
