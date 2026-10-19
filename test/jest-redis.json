@@ -1,0 +1,10 @@
+{
+  "rootDir": "..",
+  "testEnvironment": "node",
+  "testMatch": ["<rootDir>/test/redis/**/*.spec.ts"],
+  "testTimeout": 10000,
+  "watchman": false,
+  "transform": {
+    "^.+\\.ts$": ["ts-jest", { "tsconfig": "tsconfig.test.json" }]
+  }
+}
