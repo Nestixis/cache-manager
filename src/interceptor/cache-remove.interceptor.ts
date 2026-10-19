@@ -1,3 +1,4 @@
+import type { Request } from 'express';
 import { Injectable, NestInterceptor } from '@nestjs/common';
 import { Reflector } from '@nestjs/core';
 import { CacheTrackByMetadata } from '../decorator/cache-track-by.decorator';

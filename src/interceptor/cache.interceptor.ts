@@ -6,7 +6,7 @@ import {
 } from '@nestjs/common';
 import { Reflector } from '@nestjs/core';
 import { Observable, of, tap } from 'rxjs';
-import { Request } from 'express';
+import type { Request } from 'express';
 import { CacheManager } from '../manager/cache.manager';
 import {
   CacheTrackByMetadata,

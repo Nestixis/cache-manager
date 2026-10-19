@@ -9,6 +9,30 @@ Cache Manager is a lightweight and efficient library for managing redis caching 
 - Supports redis
 - Lightweight and fast.
 
+## Requirements
+
+- Node.js 20.11 or newer
+- NestJS 11.2.1 or newer within the 11.x release line
+- Redis server (the client stays on Redis 4.x)
+
+## Validation
+
+```sh
+npm ci
+npm run build
+npm run test:types
+npm test
+npm run test:cov
+```
+
+Real Redis tests are separate and require a running disposable Redis instance:
+
+```sh
+REDIS_URL=redis://127.0.0.1:6379 npm run test:redis
+```
+
+The integration tests use a unique key prefix and remove only their own keys. They never flush the database.
+
 ## Installation
 
 Install the package using npm
